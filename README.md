@@ -12,7 +12,7 @@ Instead of building a traditional hostel management dashboard, HOSTEL-X explores
 
 ## 🌐 Live Experience
 
-🔗 **Live Website:** Coming Soon
+🔗 **Live Website:** https://hostel-x.vercel.app/
 
 🔗 **GitHub:** https://github.com/biswasayan833-crypto/HOSTEL-X
 
