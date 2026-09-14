@@ -39,6 +39,7 @@ function CameraRig({
   isFinale?: boolean;
 }) {
   const isReduced = useReducedMotion();
+  const targetVec = useRef(new THREE.Vector3(0.2, 0, 0));
 
   useFrame((state) => {
     if (isReduced) return;
@@ -147,8 +148,8 @@ function CameraRig({
     );
 
     // Dynamic LookAt
-    const currentTarget = new THREE.Vector3(0.2, lookAtY, 0);
-    state.camera.lookAt(currentTarget);
+    targetVec.current.set(0.2, lookAtY, 0);
+    state.camera.lookAt(targetVec.current);
   });
 
   return null;

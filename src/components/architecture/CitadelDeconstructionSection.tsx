@@ -157,7 +157,7 @@ export function CitadelDeconstructionSection({
           />
 
           {/* Scroll Guidance Indicator */}
-          <div className="flex items-center gap-3 font-mono text-[9px] sm:text-[10px] tracking-[0.25em] text-[#8F99AE]/70 uppercase">
+          <div className="flex items-center gap-3 font-mono text-[9px] sm:text-[10px] tracking-[0.25em] text-[#8F99AE] uppercase bg-[#050608]/70 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none px-3 py-1.5 sm:p-0 rounded-sm border border-white/[0.04] sm:border-none">
             <span>SCROLL TO DECONSTRUCT</span>
             <span className="text-[#00F2FE]">↓</span>
           </div>

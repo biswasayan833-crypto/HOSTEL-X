@@ -215,14 +215,19 @@ html.light .noise-overlay {
 html.light .bg-\[\#050608\] {
   background-color: var(--bg-canvas) !important;
 }
+html.light .bg-\[\#050608\]\/30,
 html.light .bg-\[\#050608\]\/40,
 html.light .bg-\[\#050608\]\/45,
+html.light .bg-\[\#050608\]\/50,
+html.light .bg-\[\#050608\]\/55,
 html.light .bg-\[\#050608\]\/60,
+html.light .bg-\[\#050608\]\/65,
 html.light .bg-\[\#050608\]\/70,
 html.light .bg-\[\#050608\]\/75,
 html.light .bg-\[\#050608\]\/80,
 html.light .bg-\[\#050608\]\/85,
-html.light .bg-\[\#050608\]\/90 {
+html.light .bg-\[\#050608\]\/90,
+html.light .bg-\[\#050608\]\/95 {
   background-color: rgba(255, 255, 255, 0.88) !important;
   backdrop-filter: blur(12px) !important;
 }
@@ -365,46 +370,75 @@ html.light .divide-white\/10 {
   border-color: var(--border-hairline) !important;
 }
 
-/* Typography Overrides (Deliberate Architectural Hierarchy) */
-/* 1. Primary Headings & Bold Text -> Deep Graphite (WCAG AAA) */
+/* Typography Overrides (Deliberate Architectural Hierarchy with WCAG AAA/AA Compliance) */
+/* 1. Primary Headings & Bold Text -> Deep Graphite (WCAG AAA 17.8:1) */
 html.light .text-white,
 html.light .text-white\/90 {
   color: var(--text-primary) !important;
 }
 
-/* 2. Secondary Statements -> Slate-700 */
+/* 2. Secondary Statements & Subheadings -> Dark Slate (WCAG AAA 12.6:1) */
 html.light .text-white\/80,
 html.light .text-white\/70 {
-  color: #334155 !important;
+  color: #1E293B !important;
 }
 
-/* 3. Body & Descriptions -> Slate-600 */
+/* 3. Body & Descriptions -> Slate-700 (WCAG AAA 9.7:1) */
 html.light .text-white\/60,
 html.light .text-white\/50,
 html.light .text-\[\#8F99AE\],
 html.light .text-\[\#8F99AE\]\/90,
 html.light .text-\[\#8F99AE\]\/80,
 html.light .text-\[\#8F99AE\]\/70 {
-  color: var(--text-secondary) !important;
+  color: #334155 !important;
 }
 
-/* 4. Muted Telemetry & Technical Metadata -> Slate-500 */
+/* 4. Muted Telemetry & Technical Metadata -> Slate-600 (WCAG AA 6.5:1) */
 html.light .text-white\/40,
 html.light .text-white\/30,
 html.light .text-\[\#8F99AE\]\/60,
 html.light .text-\[\#8F99AE\]\/50 {
-  color: #64748B !important;
+  color: #475569 !important;
 }
 
-/* 5. Subtle Technical Grid Coordinates -> Slate-400 */
+/* 5. Subtle Technical Grid Coordinates & Brackets -> Slate-500 (WCAG AA 4.6:1) */
 html.light .text-white\/20,
 html.light .text-white\/10 {
-  color: #94A3B8 !important;
+  color: #64748B !important;
 }
 
 /* 6. Technical Separator Dots & Slashes */
 html.light .text-\[\#252C3A\] {
-  color: #94A3B8 !important;
+  color: #64748B !important;
+}
+
+/* SVG Schematic Blueprint Styling in Light Mode */
+html.light svg text[fill="#FFFFFF"],
+html.light svg text[fill="#ffffff"] {
+  fill: #0A0E17 !important;
+}
+html.light svg text[fill="#8F99AE"] {
+  fill: #334155 !important;
+}
+html.light svg circle[fill="#0C0E13"],
+html.light svg rect[fill="#0C0E13"] {
+  fill: #FFFFFF !important;
+}
+html.light svg [fill="#0E121A"],
+html.light svg [fill="#161A22"],
+html.light svg [fill="#080B12"] {
+  fill: #F1F5F9 !important;
+}
+html.light svg [stroke="#252C3A"],
+html.light svg line[stroke="#252C3A"],
+html.light svg rect[stroke="#252C3A"] {
+  stroke: #CBD5E1 !important;
+}
+html.light #citadelFill stop:first-child {
+  stop-color: #F1F5F9 !important;
+}
+html.light #citadelFill stop:last-child {
+  stop-color: #E2E8F0 !important;
 }
 
 /* Accent Cyan (High-contrast precision cerulean cyan in Light Mode) */

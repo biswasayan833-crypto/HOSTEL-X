@@ -21,7 +21,7 @@ export function FloorSelector({
   return (
     <aside
       aria-label="Architectural Floor Selector"
-      className={`flex flex-col gap-2 font-mono text-[10px] tracking-[0.2em] pointer-events-auto select-none ${className}`}
+      className={`flex flex-col gap-2 font-mono text-[10px] tracking-[0.2em] pointer-events-auto select-none bg-[#050608]/70 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none p-2.5 sm:p-0 rounded-sm border border-white/[0.04] sm:border-none ${className}`}
     >
       <div className="flex items-center gap-2 text-[9px] text-[#8F99AE]/70 tracking-[0.25em] pb-1 border-b border-[#252C3A]/50">
         <span className="w-1 h-1 rounded-full bg-[#00F2FE]" />
