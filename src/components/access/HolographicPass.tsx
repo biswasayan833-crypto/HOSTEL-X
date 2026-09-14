@@ -101,7 +101,8 @@ export function HolographicPass({ scanStatus, scanProgress = 0 }: HolographicPas
           transition: isHovered ? "transform 0.1s ease-out" : "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
           transformStyle: "preserve-3d",
         }}
-        className={`relative w-full max-w-[340px] sm:max-w-[380px] md:max-w-[400px] aspect-[1/1.55] rounded-lg bg-[#0C0E13]/90 backdrop-blur-xl border transition-colors duration-500 overflow-hidden shadow-2xl ${
+        data-surface="cinematic"
+        className={`surface-cinematic holographic-card relative w-full max-w-[340px] sm:max-w-[380px] md:max-w-[400px] aspect-[1/1.55] rounded-lg bg-[#0C0E13]/90 backdrop-blur-xl border transition-colors duration-500 overflow-hidden shadow-2xl ${
           isGranted
             ? "border-[#00F2FE] shadow-[0_0_40px_rgba(0,242,254,0.35)]"
             : isVerified

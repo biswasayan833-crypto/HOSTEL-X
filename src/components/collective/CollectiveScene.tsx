@@ -111,7 +111,7 @@ export function CollectiveScene({ activeDivisionFilter }: CollectiveSceneProps) 
           ──────────────────────────────────────────────────────────── */}
       <div className="relative flex-1 w-full my-4 min-h-[440px] sm:min-h-[500px] flex items-center justify-center">
         {/* Citadel Elevation Reference Tier Lines */}
-        <div className="absolute inset-0 pointer-events-none flex flex-col justify-between py-6 opacity-30">
+        <div className="collective-elevation-tiers absolute inset-0 pointer-events-none flex flex-col justify-between py-6 opacity-30">
           <div className="border-b border-dashed border-[#00F2FE]/40 pb-1 flex justify-between text-[8px] text-[#00F2FE]/70 tracking-widest uppercase">
             <span>LEVEL 48 // APEX SOLAR CANOPY & NEURAL MESH</span>
             <span>ELEVATION +420M</span>
@@ -120,7 +120,7 @@ export function CollectiveScene({ activeDivisionFilter }: CollectiveSceneProps) 
             <span>LEVEL 42 // HIGH RESIDENTIAL & CLIMATE OBSERVATORY</span>
             <span>ELEVATION +340M</span>
           </div>
-          <div className="border-b border-[#00F2FE]/60 pb-1 flex justify-between text-[8px] text-[#00F2FE] tracking-widest uppercase font-bold">
+          <div className="tier-primary border-b border-[#00F2FE]/60 pb-1 flex justify-between text-[8px] text-[#00F2FE] tracking-widest uppercase font-bold">
             <span>LEVEL 28 // SECTOR 07 SKYBRIDGE & SYNTHESIS LABS</span>
             <span>ELEVATION +210M [PRIMARY CLUSTER]</span>
           </div>

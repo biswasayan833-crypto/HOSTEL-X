@@ -77,7 +77,7 @@ export function IntelligenceScene() {
       <div className="relative flex-1 w-full my-4 flex items-center justify-center min-h-[380px] sm:min-h-[460px]">
         {/* Background Architectural Grid Lines */}
         <div
-          className="absolute inset-0 pointer-events-none opacity-20"
+          className="intelligence-grid absolute inset-0 pointer-events-none opacity-20"
           style={{
             backgroundImage:
               "linear-gradient(to right, #252C3A 1px, transparent 1px), linear-gradient(to bottom, #252C3A 1px, transparent 1px)",

@@ -31,7 +31,7 @@ export function ResidentNetwork({
   return (
     <div className="absolute inset-0 w-full h-full pointer-events-none z-10 overflow-hidden">
       <svg
-        className="w-full h-full"
+        className="w-full h-full resident-network"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
         aria-hidden="true"

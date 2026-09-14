@@ -24,6 +24,15 @@
   --color-violet: #7928CA;
   --text-primary: #FFFFFF;
   --text-secondary: #8F99AE;
+  --surface-cinematic-bg: linear-gradient(180deg, #0C0E13 0%, #050608 100%);
+  --text-on-cinematic-primary: #F8FAFC;
+  --text-on-cinematic-secondary: #E2E8F0;
+  --text-on-cinematic-body: #CBD5E1;
+  --text-on-cinematic-muted: #94A3B8;
+  --text-on-cinematic-telemetry: #64748B;
+  --border-on-cinematic: #252C3A;
+  --border-on-cinematic-subtle: rgba(255, 255, 255, 0.08);
+  --accent-on-cinematic: #00F2FE;
   color-scheme: dark;
 }
 
@@ -527,6 +536,233 @@ html.light .bg-\[\#FF453A\] {
 html.light .bg-\[\#FF453A\]\/15 {
   background-color: rgba(220, 38, 38, 0.1) !important;
 }
+
+/* ==========================================================================
+   THEME-AWARE CINEMATIC SURFACE SYSTEM (PHASE 9.1)
+   Intentionally dark cinematic modules preserve dark surfaces & light text in Light Mode
+   ========================================================================== */
+
+/* 1. Module Surface Containers */
+html.light .surface-cinematic,
+html.light [data-surface="cinematic"] {
+  background-color: #0C0E13 !important;
+  border-color: #252C3A !important;
+  color: var(--text-on-cinematic-primary) !important;
+}
+
+/* Preserve card shell for HolographicPass */
+html.light .surface-cinematic.holographic-card,
+html.light [data-surface="cinematic"].holographic-card {
+  background-color: rgba(12, 14, 19, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+}
+
+/* 2. Inner Box & Sub-Panel Restoration inside Cinematic Surfaces */
+html.light .surface-cinematic .bg-black\/40,
+html.light .surface-cinematic .bg-black\/50,
+html.light .surface-cinematic .bg-black\/60,
+html.light [data-surface="cinematic"] .bg-black\/40,
+html.light [data-surface="cinematic"] .bg-black\/50,
+html.light [data-surface="cinematic"] .bg-black\/60 {
+  background-color: rgba(0, 0, 0, 0.45) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.light .surface-cinematic .bg-\[\#161A22\],
+html.light [data-surface="cinematic"] .bg-\[\#161A22\] {
+  background-color: #161A22 !important;
+}
+
+/* 3. Typography Hierarchy on Cinematic Surfaces */
+/* Primary Headings */
+html.light .surface-cinematic h1,
+html.light .surface-cinematic h2,
+html.light .surface-cinematic h3,
+html.light .surface-cinematic h4,
+html.light .surface-cinematic .text-white,
+html.light .surface-cinematic .text-white\/90,
+html.light [data-surface="cinematic"] h1,
+html.light [data-surface="cinematic"] h2,
+html.light [data-surface="cinematic"] h3,
+html.light [data-surface="cinematic"] h4,
+html.light [data-surface="cinematic"] .text-white,
+html.light [data-surface="cinematic"] .text-white\/90 {
+  color: var(--text-on-cinematic-primary) !important;
+}
+
+/* Secondary Statements */
+html.light .surface-cinematic .text-white\/80,
+html.light .surface-cinematic .text-white\/70,
+html.light [data-surface="cinematic"] .text-white\/80,
+html.light [data-surface="cinematic"] .text-white\/70 {
+  color: var(--text-on-cinematic-secondary) !important;
+}
+
+/* Body & Descriptions */
+html.light .surface-cinematic p,
+html.light .surface-cinematic .text-\[\#8F99AE\],
+html.light .surface-cinematic .text-\[\#8F99AE\]\/90,
+html.light .surface-cinematic .text-\[\#8F99AE\]\/80,
+html.light .surface-cinematic .text-white\/60,
+html.light .surface-cinematic .text-white\/50,
+html.light [data-surface="cinematic"] p,
+html.light [data-surface="cinematic"] .text-\[\#8F99AE\],
+html.light [data-surface="cinematic"] .text-\[\#8F99AE\]\/90,
+html.light [data-surface="cinematic"] .text-\[\#8F99AE\]\/80,
+html.light [data-surface="cinematic"] .text-white\/60,
+html.light [data-surface="cinematic"] .text-white\/50 {
+  color: var(--text-on-cinematic-body) !important;
+}
+
+/* Telemetry & Metadata */
+html.light .surface-cinematic .text-white\/40,
+html.light .surface-cinematic .text-white\/30,
+html.light .surface-cinematic .text-\[\#8F99AE\]\/60,
+html.light .surface-cinematic .text-\[\#8F99AE\]\/50,
+html.light [data-surface="cinematic"] .text-white\/40,
+html.light [data-surface="cinematic"] .text-white\/30,
+html.light [data-surface="cinematic"] .text-\[\#8F99AE\]\/60,
+html.light [data-surface="cinematic"] .text-\[\#8F99AE\]\/50 {
+  color: var(--text-on-cinematic-muted) !important;
+}
+
+html.light .surface-cinematic .text-white\/20,
+html.light .surface-cinematic .text-white\/10,
+html.light [data-surface="cinematic"] .text-white\/20,
+html.light [data-surface="cinematic"] .text-white\/10 {
+  color: var(--text-on-cinematic-telemetry) !important;
+}
+
+/* Cyan & Violet Electric Accents */
+html.light .surface-cinematic .text-\[\#00F2FE\],
+html.light .surface-cinematic .text-\[\#00F2FE\]\/80,
+html.light .surface-cinematic .text-\[\#00F2FE\]\/70,
+html.light [data-surface="cinematic"] .text-\[\#00F2FE\],
+html.light [data-surface="cinematic"] .text-\[\#00F2FE\]\/80,
+html.light [data-surface="cinematic"] .text-\[\#00F2FE\]\/70 {
+  color: #00F2FE !important;
+}
+
+html.light .surface-cinematic .text-\[\#A855F7\],
+html.light [data-surface="cinematic"] .text-\[\#A855F7\] {
+  color: #C084FC !important;
+}
+
+/* Separator slashes & borders inside cinematic */
+html.light .surface-cinematic .text-\[\#252C3A\],
+html.light [data-surface="cinematic"] .text-\[\#252C3A\] {
+  color: #475569 !important;
+}
+
+html.light .surface-cinematic .border-white\/\[0\.04\],
+html.light .surface-cinematic .border-white\/\[0\.05\],
+html.light .surface-cinematic .border-white\/\[0\.06\],
+html.light .surface-cinematic .border-white\/\[0\.08\],
+html.light .surface-cinematic .border-white\/10,
+html.light [data-surface="cinematic"] .border-white\/\[0\.04\],
+html.light [data-surface="cinematic"] .border-white\/\[0\.05\],
+html.light [data-surface="cinematic"] .border-white\/\[0\.06\],
+html.light [data-surface="cinematic"] .border-white\/\[0\.08\],
+html.light [data-surface="cinematic"] .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.09) !important;
+}
+
+html.light .surface-cinematic .border-white\/20,
+html.light [data-surface="cinematic"] .border-white\/20 {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+html.light .surface-cinematic .border-\[\#252C3A\],
+html.light [data-surface="cinematic"] .border-\[\#252C3A\] {
+  border-color: #252C3A !important;
+}
+
+html.light .surface-cinematic .border-\[\#00F2FE\]\/30,
+html.light .surface-cinematic .border-\[\#00F2FE\]\/40,
+html.light .surface-cinematic .border-\[\#00F2FE\]\/50,
+html.light [data-surface="cinematic"] .border-\[\#00F2FE\]\/30,
+html.light [data-surface="cinematic"] .border-\[\#00F2FE\]\/40,
+html.light [data-surface="cinematic"] .border-\[\#00F2FE\]\/50 {
+  border-color: rgba(0, 242, 254, 0.5) !important;
+}
+
+/* Primary CTA button on AccessCTA: maintain bright cyan background with dark text */
+html.light .surface-cinematic .bg-\[\#00F2FE\],
+html.light [data-surface="cinematic"] .bg-\[\#00F2FE\] {
+  background-color: #00F2FE !important;
+  color: #000000 !important;
+}
+
+html.light .surface-cinematic .bg-\[\#00F2FE\] span,
+html.light [data-surface="cinematic"] .bg-\[\#00F2FE\] span {
+  color: #000000 !important;
+}
+
+/* SVG icons & Datamatrix inside cinematic surfaces */
+html.light .surface-cinematic svg text,
+html.light [data-surface="cinematic"] svg text {
+  fill: #F8FAFC !important;
+}
+html.light .surface-cinematic svg.fill-white\/80 rect,
+html.light [data-surface="cinematic"] svg.fill-white\/80 rect {
+  fill: #E2E8F0 !important;
+}
+
+/* ==========================================================================
+   RESIDENT NETWORK & BLUEPRINT SCHEMATIC REFINEMENT (PHASE 9.1)
+   Crisp architectural blueprint lines and readable annotations in Light Mode
+   ========================================================================== */
+
+/* Elevation Reference Tier Lines */
+html.light .collective-elevation-tiers {
+  opacity: 0.9 !important;
+}
+
+html.light .collective-elevation-tiers .border-dashed {
+  border-color: #94A3B8 !important;
+}
+
+html.light .collective-elevation-tiers span {
+  color: #334155 !important;
+  font-weight: 500;
+}
+
+html.light .collective-elevation-tiers .tier-primary {
+  border-color: #0284C7 !important;
+}
+
+html.light .collective-elevation-tiers .tier-primary span {
+  color: #0284C7 !important;
+  font-weight: 700 !important;
+}
+
+/* Resident Network SVG Vector Connections */
+html.light .resident-network path[stroke="#252C3A"],
+html.light svg.resident-network path[stroke="#252C3A"] {
+  stroke: #64748B !important;
+  opacity: 0.65 !important;
+}
+
+html.light #connDim stop:first-child {
+  stop-color: #64748B !important;
+  stop-opacity: 0.55 !important;
+}
+
+html.light #connDim stop:last-child {
+  stop-color: #94A3B8 !important;
+  stop-opacity: 0.35 !important;
+}
+
+/* Resident Node Reticles */
+html.light .resident-node-reticle {
+  border-color: #94A3B8 !important;
+}
+
+/* Intelligence Scene Megastructure Wireframe */
+html.light .intelligence-grid {
+  opacity: 0.45 !important;
+}
+
 
 /* Prefers reduced motion overrides */
 @media (prefers-reduced-motion: reduce) {

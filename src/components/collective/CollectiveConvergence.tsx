@@ -3,7 +3,8 @@
 export function CollectiveConvergence() {
   return (
     <div
-      className="relative my-16 sm:my-24 p-8 sm:p-12 lg:p-16 bg-gradient-to-b from-[#0C0E13] to-[#050608] border border-[#252C3A] text-center overflow-hidden font-mono"
+      className="surface-cinematic relative my-16 sm:my-24 p-8 sm:p-12 lg:p-16 bg-gradient-to-b from-[#0C0E13] to-[#050608] border border-[#252C3A] text-center overflow-hidden font-mono"
+      data-surface="cinematic"
       aria-label="Resident Collective Convergence Climax"
     >
       {/* Background ambient radial glow */}

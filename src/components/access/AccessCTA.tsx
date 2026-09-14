@@ -20,7 +20,8 @@ export function AccessCTA() {
 
   return (
     <div
-      className="relative my-16 sm:my-24 p-8 sm:p-14 lg:p-20 bg-gradient-to-b from-[#0C0E13] via-[#080A0E] to-[#050608] border border-[#252C3A] text-center overflow-hidden rounded-lg"
+      className="surface-cinematic relative my-16 sm:my-24 p-8 sm:p-14 lg:p-20 bg-gradient-to-b from-[#0C0E13] via-[#080A0E] to-[#050608] border border-[#252C3A] text-center overflow-hidden rounded-lg"
+      data-surface="cinematic"
       aria-label="Final Cinematic Gateway Call to Action"
     >
       {/* Ambient background glow */}

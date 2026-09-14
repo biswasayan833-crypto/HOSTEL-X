@@ -61,7 +61,7 @@ export function ResidentNode({
               ? "w-8 h-8 border-[#7928CA] bg-[#7928CA]/10 shadow-[0_0_12px_rgba(121,40,202,0.5)]"
               : isHovered
               ? "w-8 h-8 border-[#00F2FE]/80 bg-[#00F2FE]/10 scale-110"
-              : "w-6 h-6 border-white/20 group-hover:border-[#00F2FE]/60"
+              : "w-6 h-6 border-white/20 resident-node-reticle group-hover:border-[#00F2FE]/60"
           }`}
         >
           {/* Subtle spinning dashed reticle */}
@@ -70,7 +70,7 @@ export function ResidentNode({
               className={`rounded-full border border-dashed transition-all duration-300 ${
                 isSelected
                   ? "w-8 h-8 border-[#00F2FE]/70 animate-[spin_8s_linear_infinite]"
-                  : "w-5 h-5 border-white/30 animate-[spin_16s_linear_infinite]"
+                  : "w-5 h-5 border-white/30 resident-node-reticle animate-[spin_16s_linear_infinite]"
               }`}
             />
           )}
